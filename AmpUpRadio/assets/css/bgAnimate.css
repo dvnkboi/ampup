@@ -1,0 +1,267 @@
+.area {
+  background: none;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  transition: var(--med);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 1;
+  transition: var(--slow);
+  transition-duration: 3s;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+  will-change: auto;
+}
+
+.circle {
+  transition: var(--slow);
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+    border-radius: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(360deg);
+    opacity: 0;
+    border-radius: 35%;
+  }
+}
+
+.navHint {
+  filter: invert(1);
+  width: 50px;
+  height: 50px;
+}
+
+.hintImg {
+  height: 35px!important;
+  width: 35px!important;
+  opacity: 0.7;
+}
+
+.hintKbd {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--Sr);
+  background: linear-gradient(120deg,rgba(140,140,140,0.05),rgba(140,140,140,0.2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#spacebarHint {
+  width: 300px;
+  margin-right: var(--Mm);
+  background: linear-gradient(120deg,rgba(140,140,140,0.15),rgba(140,140,140,0.21));
+  font-size: 1.3rem;
+}
+
+.kbdCtrl {
+  color: var(--secondary);
+  font-size: 1.5rem;
+  height: 50%;
+  margin-bottom: var(--Mm);
+}
+
+#cookieWarnCont {
+  right: var(--Mm);
+  position: absolute;
+  background: var(--pbg);
+  box-shadow: var(--Ms);
+  border-radius: var(--Mr);
+  bottom: var(--Mm);
+  z-index: 1;
+  font-size: 1.3rem;
+  width: 450px;
+  height: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  pointer-events: auto;
+}
+
+#cookieWarnTxt, #rndText {
+  color: var(--primary);
+  margin-bottom: var(--Mm);
+  font-size: inherit;
+}
+
+#hideWarnBtn, #rndButton {
+  background: var(--pi);
+  color: var(--secondary);
+  font-size: 1rem;
+  font-weight: 900;
+  transition: quick;
+}
+
+#hideWarnBtn:hover, #rndButton:hover {
+  color: var(--primary);
+}
+
+#bigCenterLogo {
+  width: 50%;
+  max-width: 1000px;
+  min-width: 100px;
+}
+
+@media (max-width: 768px) {
+  #cookieWarnCont, #rndMsglol {
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    height: 200px;
+    border-radius: 0px;
+  }
+}
+
+#audioCont {
+  display: none;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  max-width: 0;
+  max-height: 0;
+}
+
+#playBtnIcons {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-left: calc(var(--Sm) - 13px);
+  opacity: 1;
+  transition: var(--slow);
+}
+
+#playLoading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: var(--slow);
+  padding-left: calc(var(--Sm) - 13px);
+}
+
+#playSpinner {
+  width: 36px;
+  height: 36px;
+  filter: invert(1);
+}
+
+.p5Canvas {
+  display: none!important;
+}
+
+#audioFiller {
+  display: none;
+}
+
+.animate {
+  transition: var(--slow);
+}
+
+#currentCont {
+}
+
+@media (min-width: 520px) {
+  #likeCont {
+    border-radius: calc( var(--Mr) + 2px )!important;
+  }
+}
+
+@media (min-width: 520px) {
+  #scrapedpic {
+    border-radius: var(--Mr)!important;
+  }
+}
+
+@media (min-width: 520px) {
+  #scrapedpic, #likeCont {
+    width: 260px!important;
+    height: 260px!important;
+    max-height: 260px!important;
+    max-width: 260px!important;
+  }
+}
+
+@media (min-width: 1404px) {
+  #currentArtist {
+    font-size: 2.8rem!important;
+  }
+}
+
+@media (min-width: 1404px) {
+  #currentTitle {
+    font-size: 1.7rem!important;
+  }
+}
+
+@media (max-width: 1100px),(max-height:700px) {
+  .circle {
+    animation-play-state: paused!important;
+    opacity: 0!important;
+  }
+}
+
+#playerBg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  background: var(--pbg);
+  opacity: 1;
+  transition: opacity 600ms var(--cubic);
+}
+
+#warningCont {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 576px) {
+  #aurPlayerLogo {
+    transform: scale(0.7);
+    margin-left: calc(var(--Lm) * -0.7)!important;
+  }
+}
+
+.timeline-Tweet-author {
+  color: var(--primary);
+}
+
+.timeline-Tweet-text {
+  color: var(--primary);
+}
+
