@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>AmpUpRadio</title>
+    <meta name="description" content="uhhh, still working on it go away">
+    <meta property="og:title" content="AmpUpRadio">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/img/ampup%20logos%20png/AURFaviconGradientRC.png">
+    <meta property="og:description" content="Your music, your station.">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/ampup%20logos%20png/AURFaviconGradientRC.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/ampup%20logos%20png/AURFaviconGradientRC.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/ampup%20logos%20png/AURFaviconGradientRC.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/ampup%20logos%20png/AURFaviconGradientRC.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/ampup%20logos%20png/AURFaviconGradientRC.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/bgAnimate.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.css">
+    <link rel="stylesheet" href="assets/css/scrolls.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Toggle-Switches-1.css">
+    <link rel="stylesheet" href="assets/css/Toggle-Switches.css">
+    <link rel="stylesheet" href="assets/css/underline.css">
+</head>
+
+<body id="embedPlayerBody">
+    <div style="position: relative;width: 100%;height: 100%;pointer-events: none;overflow: hidden;">
+        <div class="d-flex justify-content-between align-items-center" id="embedPlayer" style="height: 60px;width: 100%;position: absolute;overflow: visible;min-height: 50px;z-index: 8;bottom: 0;background-color: #000000;pointer-events: auto;/*margin-bottom: 20px;*//*margin-left: 20px;*//*margin-right: 20px;*/"><img id="embedimagebig" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="background-color: #ffffff;"><img id="embedimage" style="color: rgba(249,255,253,0);" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+            <div
+                id="vizWrapper" style="position: absolute;width: 100%;height: 100%;pointer-events: none;z-index: 0;overflow: hidden;"><canvas id="vizcanvas"><canvas>
+</div>
+        <div class="d-flex justify-content-between align-items-center" style="width: 100%;height: 80px;pointer-events: auto;">
+            <div class="d-flex justify-content-start align-items-center cast" id="controlDiv" style="height: 100%;/*margin-left: -7px;*/width: 100%;z-index: 1;"><button class="btn d-flex justify-content-start align-items-center controls invert" id="playbtn" type="button" style="position: relative;width: 60px;height: 70px;overflow: hidden;padding-left: calc(var(--Sm) - 7px);min-width: 60px;"><img id="playIco" class="controls-ico" src="assets/img/feather/play.svg" loading="auto"><img id="pauseIco" class="controls-ico" src="assets/img/feather/pause.svg"></button>
+                <span
+                    class="sep"></span>
+                    <div class="text-nowrap d-flex justify-content-start align-items-center" id="volMenu" style="min-width: 0px;"><img class="volIcons invert" src="assets/img/feather/volume-x.svg" style="/*margin-left: -4px;*/"><input type="range" id="volumeS" style="max-width: 180px;min-width: 100px;margin-left: var(--Sm);margin-right: var(--Sm);" name="volumeS" value="100"
+                            min="0" max="100" step="1"><img class="volIcons invert" src="assets/img/feather/volume-2.svg"></div><span class="sep"></span>
+                    <h1 id="timer" class="embedTimer">00:00:00</h1>
+            </div>
+            <div style="width: 50%;height: 100%;z-index: 1;"></div>
+        </div>
+    </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <script src="https://unpkg.com/fast-average-color/dist/index.min.js"></script>
+    <script src="assets/js/preloading.js"></script>
+    <script src="assets/js/ping.js"></script>
+    <script src="assets/js/scrape.js"></script>
+    <script src="assets/js/image_prot.js"></script>
+    <script src="assets/js/player.js"></script>
+    <script src="assets/js/view%20detect.js"></script>
+    <script src="assets/js/ui-elems.js"></script>
+    <script src="https://goessner.net/download/prj/jsonxml/xml2json.js"></script>
+    <script src="assets/js/metadata.js"></script>
+    <script src="assets/js/page%20loader.js"></script>
+    <script src="assets/js/sketch.js"></script>
+    <script src="assets/js/cache%20retrieval.js"></script>
+    <script src="assets/js/mousemove.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/random%20messages.js"></script>
+    <script src="assets/js/clientSide%20router.js"></script>
+</body>
+
+</html>

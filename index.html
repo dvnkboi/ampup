@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html style="width: 100%;height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>AmpUpRadio</title>
+    <meta name="description" content="uhhh, still working on it go away">
+    <meta property="og:title" content="AmpUpRadio">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/img/ampup%20logos%20png/AURFaviconGradientRC.png">
+    <meta property="og:description" content="Your music, your station.">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/ampup%20logos%20png/AURFaviconGradientRC.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/ampup%20logos%20png/AURFaviconGradientRC.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/ampup%20logos%20png/AURFaviconGradientRC.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/ampup%20logos%20png/AURFaviconGradientRC.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/ampup%20logos%20png/AURFaviconGradientRC.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/bgAnimate.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.css">
+    <link rel="stylesheet" href="assets/css/scrolls.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Toggle-Switches-1.css">
+    <link rel="stylesheet" href="assets/css/Toggle-Switches.css">
+    <link rel="stylesheet" href="assets/css/underline.css">
+</head>
+
+<body style="width: 100%;height: 100%;">
+    <div id="warningCont">
+        <div data-aos="fade-up" data-aos-duration="300" data-aos-offset="-10000px" data-aos-delay="500" id="cookieWarnCont">
+            <h1 class="text-center" id="cookieWarnTxt">I was told to change this , uuhhh ...like 99% of websites you visit, we use cookies , how bout' that.</h1><button class="btn" id="hideWarnBtn" type="button">Make this disapear!</button></div>
+    </div>
+    <div id="fullPlayer" class="noselect">
+        <div class="d-flex d-xl-flex flex-grow-1 flex-fill justify-content-center align-items-center justify-content-xl-center align-items-xl-center" id="app" style="width: 100%;height: 100%;position: absolute;z-index: 1;padding: 0;margin: 0;pointer-events: auto;overflow-y: hidden;overflow-x: hidden;">
+            <div class="d-flex d-xl-flex flex-column justify-content-center align-items-center justify-content-xl-center align-items-xl-center" id="player-container">
+                <div class="d-flex justify-content-end align-items-center" id="pnlContainer" style="position: absolute;width: 100%;height: 100%;pointer-events: none;z-index: 9;overflow: hidden;"><button class="btn d-flex justify-content-center align-items-center Iicons" id="panelbtn" type="button" style="margin-right: var(--Sm);padding: 0px;position: absolute;top: 0;height: 70px;z-index: 999;width: 70px;pointer-events: auto;"><img class="invert" src="assets/img/feather/info.svg" style="margin-top: -1px;"></button>
+                    <div
+                        id="pnlctnt">
+                        <h1 id="about">About the Artist</h1>
+                        <div id="artistInfo"></div><span id="genius" style="opacity: 0.80;">read more at&nbsp;<a class="text-warning" id="geniuslink" href="#">genius.com</a></span>
+                        <h1 id="moreArtist">more from them</h1>
+                        <div class="d-flex flex-column justify-content-start align-items-start" id="artistLinks"><a id="artistlink8" class="artistlinks" href="#"></a><a id="artistlink7" class="artistlinks" href="#"></a><a id="artistlink6" class="artistlinks" href="#"></a><a id="artistlink5" class="artistlinks" href="#"></a><a id="artistlink4"
+                                class="artistlinks" href="#"></a><a id="artistlink3" class="artistlinks" href="#"></a><a id="artistlink2" class="artistlinks" href="#"></a><a id="artistlink1" class="artistlinks" href="#"></a></div>
+                </div>
+            </div>
+            <div class="d-flex d-xl-flex justify-content-between align-items-center justify-content-xl-between align-items-xl-center" id="header" style="height: 70px;width: 100%;position: relative;min-height: 70px;z-index: 1;top: 0;"><a class="d-flex justify-content-start align-items-center" id="mainPlayerLogo" href="#"><img class="img-fluid d-flex justify-content-center align-items-center invert" id="aurPlayerLogo" src="assets/img/ampup%20logos%20png/LogoBanner256x60.png" style="margin-left: var(--Sm);" aria-label="AmpUpRadio"></a></div>
+            <div
+                class="d-xl-flex flex-grow-1 flex-fill justify-content-xl-center align-items-xl-center" id="body">
+                <div class="d-inline glide" style="width: 100%;height: 100%;">
+                    <div class="d-flex d-xl-flex flex-column justify-content-start align-items-center justify-content-xl-start align-items-xl-center" style="height: 100%;overflow-y: auto;overflow-x: hidden;">
+                        <h1 class="d-flex justify-content-start align-items-center" style="margin-top: var(--Lm);">settings</h1>
+                        <div class="settingDiv"><button class="btn btn-primary setDiv amoled" id="switchg" type="button">Theme: Light<br></button></div>
+                        <div class="settingDiv"><button class="btn btn-primary setDiv autoq" id="switchq" type="button">Visualizer quality: Auto</button></div>
+                        <div class="settingDiv" style="margin-bottom: 50px;"><button class="btn btn-primary setDiv active" id="bgParticles" type="button" style="background: #E055CB;">Background particles: ON</button></div>
+                    </div>
+                    <div style="height: calc(100% - 10px);overflow-y: hidden;">
+                        <div class="container" style="margin: 0px;width: 100%;max-width: none;height: 100%;padding: 0px;overflow: hidden;position: relative;">
+                            <div class="d-flex justify-content-center align-items-center seperatorDiv"><span style="height: 80%;width: 2px;background: var(--secondary);"></span></div>
+                            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2" id="mainPageRow">
+                                <div class="col" id="currentCont" style="padding: 0px;/*min-width: 450px;*/overflow: hidden;">
+                                    <div id="currentImgCont"><img class="flex-grow-0 flex-shrink-0" id="scrapedpic" crossorigin="anonymous"><span class="d-flex justify-content-end align-items-center" id="likeCont" style="filter: saturate(200%);"><span class="d-flex flex-column justify-content-around align-items-center" id="likeDislike"><span><img class="likeDislike" src="assets/img/feather/smile.svg"></span>
+                                        <span
+                                            style="width: 60%;height: 1px;background: var(--secondary);"></span><span><img class="likeDislike" src="assets/img/feather/frown.svg"></span></span>
+                                            </span>
+                                    </div>
+                                    <h1 id="currentArtist" class="animate">Violet Days</h1>
+                                    <h2 id="currentTitle" class="animate">Just A Little (BRKLYN Remix)</h2>
+                                </div>
+                                <div class="col" style="width: 50%;padding: 0px;/*min-width: 450px;*/overflow-y: hidden;">
+                                    <div class="d-flex justify-content-start align-items-start Hrow" style="margin-top: var(--Lm);">
+                                        <h2 class="d-flex justify-content-start align-items-start recently">Recently played</h2>
+                                    </div>
+                                    <div id="Hrow1" class="Hrow top">
+                                        <div class="d-flex d-xl-flex justify-content-start align-items-center justify-content-xl-start align-items-xl-center Htrack"><img id="Himg1" class="Himg animate" crossorigin="anonymous">
+                                            <div class="d-flex flex-column justify-content-center align-items-start Hmeta">
+                                                <h1 id="recentArtist1" class="Hartist animate">Violet Days</h1>
+                                                <h1 id="recentTitle1" class="Htitle animate">Just A Little (BRKLYN Remix)<br></h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="Hrow2" class="Hrow">
+                                        <div class="d-flex d-xl-flex justify-content-start align-items-center justify-content-xl-start align-items-xl-center Htrack"><img id="Himg2" class="Himg animate" crossorigin="anonymous">
+                                            <div class="d-flex flex-column justify-content-center align-items-start Hmeta">
+                                                <h1 id="recentArtist2" class="Hartist animate">Violet Days</h1>
+                                                <h1 id="recentTitle2" class="Htitle animate">Just A Little (BRKLYN Remix)<br></h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="Hrow3" class="Hrow" style="padding-bottom: 85px;">
+                                        <div class="d-flex d-xl-flex justify-content-start align-items-center justify-content-xl-start align-items-xl-center Htrack"><img id="Himg3" class="Himg animate" crossorigin="anonymous">
+                                            <div class="d-flex flex-column justify-content-center align-items-start Hmeta">
+                                                <h1 id="recentArtist3" class="Hartist animate">Violet Days</h1>
+                                                <h1 id="recentTitle3" class="Htitle animate">Just A Little (BRKLYN Remix)<br></h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height: 100%;"></div>
+                </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center" id="footer" style="height: 70px;width: 100%;position: relative;overflow: visible;min-height: 70px;z-index: 8;bottom: 0;">
+            <div class="d-flex justify-content-center align-items-center" id="navContainer" style="position: absolute;width: 100%;height: 100%;padding-bottom: 190px;transform: scale(0.5);"><button class="btn navi Nicons" id="NS" type="button" style="padding: 0px;"><img class="invert" src="assets/img/feather/settings.svg"></button><button class="btn navi Nicons active" id="N1" type="button"></button><button class="btn navi Nicons" id="N2"
+                    type="button"></button><button class="btn navi Nicons" id="N3" type="button"></button></div>
+            <div class="d-flex justify-content-start align-items-center cast" id="controlDiv" style="height: 100%;/*margin-left: -7px;*/width: 100%;z-index: 1;"><button class="btn d-flex justify-content-start align-items-center controls invert" id="playbtn" type="button" style="position: relative;width: 60px;height: 70px;overflow: hidden;min-width: 60px;"><span class="d-flex justify-content-center align-items-center" id="playBtnIcons"><img id="playIco" class="controls-ico" src="assets/img/feather/play.svg" loading="auto"><img id="pauseIco" class="controls-ico" src="assets/img/feather/pause.svg"></span><span class="d-flex justify-content-center align-items-center" id="playLoading"><span class="spinner-grow text-white-50" role="status" id="playSpinner"></span></span></button>
+                <span
+                    class="sep"></span>
+                    <div class="text-nowrap d-flex justify-content-start align-items-center" id="volMenu" style="min-width: 0px;"><img class="volIcons invert" src="assets/img/feather/volume-x.svg" style="/*margin-left: -4px;*/"><input type="range" id="volumeS" style="max-width: 180px;min-width: 100px;margin-left: var(--Sm);margin-right: var(--Sm);" name="volumeS" value="100"
+                            min="0" max="100" step="1"><img class="volIcons invert" src="assets/img/feather/volume-2.svg"></div><span class="sep"></span>
+                    <h1 id="timer">00:00:00</h1>
+            </div>
+            <div style="width: 500px;height: 100%;z-index: 1;"></div>
+            <div id="vizWrapper" style="position: absolute;width: 100%;height: 100%;pointer-events: none;z-index: 0;"><canvas id="vizcanvas"><canvas>
+</div>
+        </div>
+        <div id="playerBg"></div>
+    </div>
+    <div class="area">
+        <ul class="circles">
+            <li class="circle"></li>
+            <li class="circle"></li>
+            <li class="circle"></li>
+            <li class="circle"></li>
+            <li class="circle"></li>
+            <li class="circle"></li>
+        </ul>
+    </div>
+    <div class="d-flex justify-content-center align-items-center" id="hintCont">
+        <div class="d-flex flex-row justify-content-center align-items-end" id="keyboardHint">
+            <div>
+                <div class="d-flex justify-content-center align-items-center hintKbd" id="spacebarHint">
+                    <h1 style="font-size: inherit;line-height: 10px;margin-top: 3px;">Keyboard Controls available</h1>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <div style="height: 50px;width: 50px;margin-bottom: var(--Sm);">
+                    <div class="hintKbd"><img class="hintImg invert" src="assets/img/feather/arrow-up.svg"></div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center" style="width: calc(150px + var(--Sm));height: 50px;">
+                    <div class="hintKbd"><img class="hintImg invert" src="assets/img/feather/arrow-left.svg"></div>
+                    <div class="hintKbd" style="margin: 0px var(--Sm);"><img class="hintImg invert" src="assets/img/feather/arrow-down.svg"></div>
+                    <div class="hintKbd"><img class="hintImg invert" src="assets/img/feather/arrow-right.svg"></div>
+                </div>
+            </div>
+        </div>
+        <div id="rightArrow"><img class="hintImg invert" src="assets/img/feather/chevron-right.svg"></div>
+        <div id="leftArrow"><img class="hintImg invert" src="assets/img/feather/chevron-left.svg"></div>
+    </div>
+    </div>
+    </div><audio id="audioFiller" preload="auto" loop="" src="https://cdn.discordapp.com/attachments/331151226756530176/725163364451483739/RGStaticLoop.wav"></audio>
+    <div id="audioCont"></div>
+    <div class="d-flex justify-content-center align-items-end" id="loaderCont">
+        <div class="flex-grow-1 loader" id="load-7"></div>
+        <div class="flex-grow-1 loader" id="load-6"></div>
+        <div class="flex-grow-1 loader" id="load-5"></div>
+        <div class="flex-grow-1 loader" id="load-4"></div>
+        <div class="flex-grow-1 loader" id="load-3"></div>
+        <div class="flex-grow-1 loader" id="load-2"></div>
+        <div class="flex-grow-1 loader" id="load-1"></div>
+    </div>
+    <div class="d-flex justify-content-center align-items-start" id="connIssue">
+        <div class="d-flex justify-content-center align-items-center noselect" id="connWarn"><img class="invert" src="assets/img/feather/wifi-off.svg" style="height: 30px;width: 30px;margin-right: var(--Sm);">
+            <h1 class="text-center d-flex justify-content-center align-items-center" id="connWarnText" style="font-size: 1.2rem;color: var(--primary);margin: 0px;margin-bottom: 3px;">&nbsp;Some functions might not work properly</h1>
+        </div>
+    </div><img id="preloadImgF">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <script src="https://unpkg.com/fast-average-color/dist/index.min.js"></script>
+    <script src="assets/js/preloading.js"></script>
+    <script src="assets/js/ping.js"></script>
+    <script src="assets/js/scrape.js"></script>
+    <script src="assets/js/image_prot.js"></script>
+    <script src="assets/js/player.js"></script>
+    <script src="assets/js/view%20detect.js"></script>
+    <script src="assets/js/ui-elems.js"></script>
+    <script src="https://goessner.net/download/prj/jsonxml/xml2json.js"></script>
+    <script src="assets/js/metadata.js"></script>
+    <script src="assets/js/page%20loader.js"></script>
+    <script src="assets/js/sketch.js"></script>
+    <script src="assets/js/cache%20retrieval.js"></script>
+    <script src="assets/js/mousemove.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/random%20messages.js"></script>
+    <script src="assets/js/clientSide%20router.js"></script>
+</body>
+
+</html>
