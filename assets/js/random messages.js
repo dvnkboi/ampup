@@ -1,5 +1,4 @@
 /*
-
 function setRndMsg(){
     var rndNames = ["Maxx","MACCA","Bob","Gertrude","Steve","Sophia","Bruhhh"];
     var rndTimes = ["a literal microsecond ago",
@@ -47,5 +46,4 @@ $("#rndButton").click(function(){
             loop();  
     }, rand);
 }());
-
 */

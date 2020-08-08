@@ -22,7 +22,6 @@ function preloadImages(array, waitForOtherResources, timeout) {
             var img = new Image();
             img.src = imgs[i];
             img.onload = function(){
-                console.log("YAAAS ",i,imgs[i]);
                 i--;
                 img = null;
                 loadNow(i);

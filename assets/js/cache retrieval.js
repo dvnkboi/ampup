@@ -8,13 +8,13 @@ $(document).ready(function(){
         $("#keyboardHint").css("animation-delay","0s");
         if(themeState == "dark"){
             setTimeout(function(){
-                darkTheme();
+                darkTheme(colorArr);
             },1000);
 
         }
         else if(themeState == "light"){
             setTimeout(function(){
-                lightTheme();
+                lightTheme(colorArr);
             },1000);
         }
         if(particleState == "true"){
@@ -25,8 +25,8 @@ $(document).ready(function(){
         }
         
         $("#cookieWarnCont").css({
-        "opacity":"0",
-        "pointer-events":"none"
+            "opacity":"0",
+            "pointer-events":"none"
         });
         
         switch(visState) {
@@ -63,6 +63,12 @@ $(document).ready(function(){
             "animation-delay":"8s"
         });
         darkTheme();
+        if(window.width <= 520){
+            visLow();
+        }
+        if(isFirefox){
+            visOff();
+        }
     }
 });
 

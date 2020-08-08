@@ -1,3 +1,11 @@
+jQuery.event.special.touchstart = {
+        setup: function( _, ns, handle ){
+            this.addEventListener("touchstart", handle, { passive: true });
+        }
+};
+
+
+
 Image.prototype.load = function(url){
         var thisImg = this;
         var xmlHTTP = new XMLHttpRequest();
@@ -16,4 +24,4 @@ Image.prototype.load = function(url){
         xmlHTTP.send();
     };
 
-    Image.prototype.completedPercentage = 0;
+Image.prototype.completedPercentage = 0;

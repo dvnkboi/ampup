@@ -1,11 +1,9 @@
 :root {
-  --bl: #5679E2;
+  --bl: rgb(53, 93, 204);
   --pu: #8655D6;
   --pi: #E055CB;
-  --re: #D6445A;
-  --grn: #4FFFA1;
-  --cy: #96FFF2;
-  --yl: #ffcf26;
+  --re: rgb(202, 48, 68);
+  --grn: rgb(74, 243, 153);
   --wh: #F9FFFD;
   --gr: #F9FFFD;
   --grd: #212B30;
@@ -243,7 +241,6 @@ button:focus {
   margin: 0;
   margin-left: calc( var(--Sm) - 4px );
   font-size: 2.5rem;
-  /*margin-left: -57px;*/
   height: 70px;
   padding-top: 33px;
   line-height: 0;
@@ -255,11 +252,8 @@ button:focus {
 }
 
 .volIcons {
-  /*margin-left: var(--Sm);*/
   padding: 0px;
   height: 30px;
-  /*min-height: 36px;*/
-  /*min-width: 36px;*/
   pointer-events: none;
 }
 
@@ -280,8 +274,6 @@ button:focus {
 }
 
 #songBody {
-  /*width: 100%;*/
-  /*height: 100%;*/
   transform: translateX(100%);
 }
 
@@ -322,9 +314,6 @@ button:focus {
 }
 
 .slider {
-  /*min-width: 100%;*/
-  /*position: absolute;*/
-  /*width: 100%!important;*/
 }
 
 .slick-track, .slick-list {
@@ -353,7 +342,6 @@ button:focus {
   background-position: center;
   background-repeat: no-repeat;
   object-fit: contain;
-  /*pointer-events: none;*/
   z-index: 1;
   transition: width 600ms var(--cubic),height 600ms var(--cubic),max-width 600ms var(--cubic),max-height 600ms var(--cubic),border-radius 600ms var(--cubic),box-shadow 300ms var(--cubic);
 }
@@ -367,7 +355,6 @@ button:focus {
 
 #currentTitle {
   margin-left: var(--Lm);
-  /*padding-left: var(--Sm);*/
   color: var(--secondary);
   font-size: 1.4rem;
 }
@@ -379,6 +366,7 @@ button:focus {
 
 h1, .h1 {
   font-size: 2.5rem;
+  color: var(--primary);
 }
 
 .Htrack {
@@ -390,6 +378,18 @@ h1, .h1 {
   margin-top: -10px;
   font-weight: 900;
   font-size: 2rem;
+}
+
+@media (max-width: 520px) {
+  .Himg {
+    border-radius: var(--Sr);
+    max-width: 74px!important;
+    min-width: 74px!important;
+    max-height: 74px!important;
+    min-height: 74px!important;
+    object-fit: contain;
+    background: none;
+  }
 }
 
 .Himg {
@@ -405,6 +405,18 @@ h1, .h1 {
 .Hartist {
   font-size: 1.5rem;
   margin: 5px 0px;
+}
+
+@media (max-width: 520px) {
+  .Hartist {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .Htitle {
+    font-size: 1rem!important;
+  }
 }
 
 .Htitle {
@@ -439,12 +451,12 @@ h1, .h1 {
 }
 
 #switchg {
-  background: #5679E2;
+  background: var(--bl);
   z-index: 99;
 }
 
 #switchq {
-  background: #8655D6;
+  background: var(--pu);
 }
 
 .invert {
@@ -532,7 +544,7 @@ h1, .h1 {
   background: linear-gradient(180deg,var(--pnlbg) 0%,var(--pnlbg) 90%,rgba(0,0,0,0) 130%);
   box-shadow: var(--Ms);
   transform: translateX(110%);
-  transition: transform 300ms cubic-bezier(.52,.1,.51,.9);
+  transition: var(--med);
   padding-top: 70px;
   overflow-y: auto;
   pointer-events: auto;
@@ -624,7 +636,6 @@ a.text-warning:hover, a.text-warning:focus {
 
 #fullPlayer {
   position: absolute;
-  /*display: none;*/
   filter: opacity(0);
   pointer-events: none;
   transition: all 100ms cubic-bezier(.52,.1,.51,.9);
@@ -795,7 +806,6 @@ ampupLogo {
 
 @media (max-width: 576px) {
   .navBtnText {
-    /*display: none;*/
   }
 }
 
@@ -886,7 +896,6 @@ ampupLogo {
   height: 400px;
   clip-path: polygon(100% 0, 75% 0, 100% 25%);
   background: var(--bl);
-  /*clip-path: polygon(100% 0, 0% 0, 100% 100%);*/
   transition: var(--quick);
 }
 
@@ -968,27 +977,27 @@ ampupLogo {
 
 #load-7 {
   transition-delay: 0s;
-  background: var(--grn);
+  background: var(--bl);
 }
 
 #load-6 {
   transition-delay: 50ms;
-  background: var(--cy);
+  background: var(--pu);
 }
 
 #load-5 {
   transition-delay: 100ms;
-  background: var(--bl);
+  background: var(--pi);
 }
 
 #load-4 {
   transition-delay: 150ms;
-  background: var(--pu);
+  background: var(--re);
 }
 
 #load-3 {
   transition-delay: 200ms;
-  background: var(--pi);
+  background: var(--grn);
 }
 
 #load-2 {
@@ -1206,7 +1215,6 @@ ampupLogo {
 #connWarn {
   position: absolute;
   width: 300px;
-  /*height: 50px;*/
   padding: 10px 10px;
   background: linear-gradient(1200deg,var(--pbg),rgba(224,85,203,0.53));
   background-size: 600% 100%;
@@ -1232,7 +1240,6 @@ ampupLogo {
 }
 
 #currentImgCont {
-  transition: all 600ms var(--cubic);
   margin: var(--Lm) var(--Mm) 0px var(--Lm);
   position: relative;
   height: 200px;
@@ -1260,5 +1267,39 @@ ampupLogo {
 
 #currentImgCont:hover #scrapedpic {
   box-shadow: 0px 0px 0.6rem rgba(0,0,0,0.65);
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+  position: relative;
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.dark {
+  opacity: 1;
+}
+
+.light {
+  opacity: 0;
+}
+
+#bgDiv {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 

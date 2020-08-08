@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 100%;width: 100%;">
+<html style="width: 100%;height: 100%;">
 
 <head>
     <meta charset="utf-8">
@@ -29,17 +29,38 @@
     <link rel="stylesheet" href="assets/css/underline.css">
 </head>
 
-<body style="height: 100%;width: 100%;position: relative;overflow: hidden;">
-    <div class="d-flex justify-content-center align-items-center" id="navContainer">
-        <div id="navPlayDiv"><button class="btn d-flex justify-content-center align-items-center invert" id="navPlayBtn" type="button"><img id="playBtnImg" src="assets/img/feather/play.svg"></button>
-            <div class="navPlaying" style="/*left: calc(var(--Sm) + 120px);*/"><span id="nowArtistNav">uh oh</span></div>
-            <div class="navPlaying" style="/*left: calc(var(--Sm) + 16px);*/"><span id="nowSongNav">poopy haha jk not poopy :c</span></div>
-            <div class="d-flex justify-content-end align-items-center" style="right: 0;position: absolute;bottom: 50px;overflow: hidden;height: 204px;">
-                <div style="transform: rotate(270deg) translatey(92px);"><span style="letter-spacing: 3px;font-weight: 900;font-size: 1.2rem;">CLICK TO LISTEN</span></div>
+<body style="width: 100%;height: 100%;">
+    <div class="row" style="height: 40px;margin: 0;">
+        <div class="col" id="topNavCont" style="padding: 0px;background-color: #8655d6;">
+            <ul class="nav d-flex flex-row justify-content-end align-items-center" style="color: var(--primary);">
+                <li class="nav-item"><a class="nav-link active" href="#" style="color: inherit;">Item</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#" style="color: inherit;">Item</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#" style="color: inherit;">Item</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row" style="height: calc(100% - 40px);margin: 0px;">
+        <div class="col" id="sideNavCont" style="padding: 0px;background-color: #ffc107;">
+            <h1>sidenav</h1>
+        </div>
+        <div class="col d-flex flex-column justify-content-center align-items-center" id="bodyCont" style="padding: 0px;">
+            <div class="row" style="width: 100%;">
+                <div class="col" style="height: 400px;background-color: #4b9dea;">
+                    <h1 style="font-size: 180px;">FONKY&nbsp;CHONKY</h1>
+                </div>
+            </div>
+            <div class="row flex-fill" style="width: 100%;">
+                <div class="col d-xl-flex flex-column justify-content-xl-center align-items-xl-center" style="height: 400px;background-color: var(--bg);">
+                    <h1>many things</h1>
+                    <h1>many things</h1>
+                    <h1>many things</h1>
+                    <h1>many things</h1>
+                    <h1>many things</h1>
+                    <h1>many things</h1>
+                    <h1>many things</h1>
+                </div>
             </div>
         </div>
-        <div id="navPanel"></div><button class="btn text-uppercase text-center mouseParallax" id="navExpand" type="button">Navigate</button>
-        <div class="d-flex flex-shrink-1 justify-content-center align-items-center invert" id="pageCenter"><img class="d-flex flex-grow-0 flex-shrink-1 justify-content-center align-items-center invert mouseParallax" id="bigCenterLogo" src="assets/img/ampup%20logos%20png/AURLogoBanner.png"></div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

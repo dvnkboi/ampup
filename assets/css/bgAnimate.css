@@ -238,7 +238,7 @@
   z-index: 0;
   background: var(--pbg);
   opacity: 1;
-  transition: opacity 600ms var(--cubic);
+  transition: opacity 600ms var(--cubic),background 150ms var(--cubic);
 }
 
 #warningCont {
@@ -263,5 +263,153 @@
 
 .timeline-Tweet-text {
   color: var(--primary);
+}
+
+#sideNavCont {
+  max-width: 250px;
+}
+
+#bg1, #bg2, #bg3, #bg4 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat!important;
+  background-size: 85% 100%!important;
+  transition: var(--med);
+}
+
+#bg4 {
+  background-position: right!important;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, var(--pu) 40%, var(--pi) 60%);
+  clip-path: url(#rClip);
+  animation: hueRotate 20s var(--cubic) infinite alternate;
+}
+
+#bg2 {
+  background-position: right!important;
+  background: linear-gradient(90deg,var(--cy) 40%,var(--grn) 60%);
+  clip-path: url(#rClip);
+  animation: hueRotate 20s var(--cubic) infinite alternate;
+}
+
+#bg3 {
+  clip-path: url(#lClip);
+  animation: hueRotate 20s var(--cubic) infinite alternate;
+  background-color: #e84393;
+  background-image: linear-gradient(315deg, var(--grn) 50%, var(--cy) 70%);
+}
+
+#bg1 {
+  background: linear-gradient(120deg,var(--bl) 0%,var(--pi) 60%);
+  clip-path: url(#lClip);
+}
+
+#bgContLight, #bgContDark {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+#logoCont {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#logoL, #logoR {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: var(--med)!important;
+}
+
+#logoImgL, #logoImgR {
+  width: 810px;
+}
+
+#logoImgL {
+  filter: invert(0);
+}
+
+#logoL {
+  clip-path: url(#lClip);
+}
+
+#logoR {
+  clip-path: url(#rClip);
+}
+
+#logoImgR {
+  filter: invert(1);
+}
+
+@keyframes hueRotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(45deg);
+  }
+}
+
+#bgClipCont {
+  width: 900px;
+  height: 270px;
+  position: absolute;
+  border-radius: var(--Mr);
+  overflow: hidden;
+  transition: var(--slow);
+}
+
+#bgClip {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--Mr);
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transition: var(--slow);
+}
+
+#landingCont {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 520px) {
+  .recently {
+    font-size: 1.7rem!important;
+  }
+}
+
+#LogoBoxCont {
+  width: 900px;
+  height: 270px;
+}
+
+#bgClip.active {
+  border-radius: 0px!important;
+}
+
+#fluidLogoCont {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fireFoxAnim {
+  transition: initial;
 }
 
